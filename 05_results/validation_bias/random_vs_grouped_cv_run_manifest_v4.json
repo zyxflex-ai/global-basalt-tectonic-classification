@@ -1,0 +1,31 @@
+{
+  "input_file": "C:\\Users\\33808\\Desktop\\essay\\final\\03_model_data\\Basalt_train_stable50_main_v4.csv",
+  "n_samples": 35865,
+  "n_publication_groups": 1846,
+  "n_features": 19,
+  "n_folds": 5,
+  "n_repeats": 10,
+  "bootstrap_iterations": 2000,
+  "xgb_parameters": {
+    "objective": "multi:softprob",
+    "num_class": 8,
+    "n_estimators": 1400,
+    "learning_rate": 0.02,
+    "max_depth": 6,
+    "min_child_weight": 1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.7,
+    "reg_alpha": 0.0,
+    "reg_lambda": 1.0,
+    "tree_method": "hist",
+    "eval_metric": "mlogloss",
+    "random_state": 42,
+    "n_jobs": -1,
+    "verbosity": 0
+  },
+  "python": "3.13.9",
+  "pandas": "2.3.3",
+  "numpy": "2.3.5",
+  "scikit_learn": "1.7.2",
+  "xgboost": "3.4.0"
+}

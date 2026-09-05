@@ -1,0 +1,2 @@
+﻿model,Accuracy,Balanced_Accuracy,Macro_F1,Weighted_F1
+XGBoost_Full40_imputed,0.851279000594884,0.737016961739007,0.7336693838562169,0.850081374692059

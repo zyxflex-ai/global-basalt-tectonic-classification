@@ -1,0 +1,8 @@
+Verified paper-identity split audit v4
+Split assignments: preserved from conservative v4 split
+Train rows: 38094
+Test rows: 10309
+Verified PAPER_ID overlap between train and test: 0
+Verified PAPER_ID values crossing inner folds: 0
+Unresolved citation candidate pairs: 0
+Status: final citation-identity grouping; no verified paper leakage.

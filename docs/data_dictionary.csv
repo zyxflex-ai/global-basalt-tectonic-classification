@@ -1,0 +1,67 @@
+column,description,unit_or_coding
+Year,Publication or record year,year
+CITATION,Original source-publication citation,text
+SAMPLE NAME,Source sample name,text
+UNIQUE_ID,Stable record identifier,text
+GROUP_ID,Sample-group identifier,text
+LOCATION,Reported locality,text
+LATITUDE (MAX.),Reported maximum latitude,decimal degrees
+LONGITUDE (MAX.),Reported maximum longitude,decimal degrees
+TECTONIC SETTING,Source tectonic-setting description,text
+GEOLOGICAL AGE,Source geological-age description,text
+TYPE OF MATERIAL,Analysed material type,text
+SIO2(WT%),Major-element concentration,weight percent
+TIO2(WT%),Major-element concentration,weight percent
+AL2O3(WT%),Major-element concentration,weight percent
+CAO(WT%),Major-element concentration,weight percent
+MGO(WT%),Major-element concentration,weight percent
+MNO(WT%),Major-element concentration,weight percent
+K2O(WT%),Major-element concentration,weight percent
+NA2O(WT%),Major-element concentration,weight percent
+P2O5(WT%),Major-element concentration,weight percent
+SC(PPM),Trace-element concentration,parts per million
+V(PPM),Trace-element concentration,parts per million
+CR(PPM),Trace-element concentration,parts per million
+CO(PPM),Trace-element concentration,parts per million
+NI(PPM),Trace-element concentration,parts per million
+RB(PPM),Trace-element concentration,parts per million
+SR(PPM),Trace-element concentration,parts per million
+Y(PPM),Trace-element concentration,parts per million
+ZR(PPM),Trace-element concentration,parts per million
+NB(PPM),Trace-element concentration,parts per million
+BA(PPM),Trace-element concentration,parts per million
+LA(PPM),Trace-element concentration,parts per million
+CE(PPM),Trace-element concentration,parts per million
+PR(PPM),Trace-element concentration,parts per million
+ND(PPM),Trace-element concentration,parts per million
+SM(PPM),Trace-element concentration,parts per million
+EU(PPM),Trace-element concentration,parts per million
+GD(PPM),Trace-element concentration,parts per million
+TB(PPM),Trace-element concentration,parts per million
+DY(PPM),Trace-element concentration,parts per million
+HO(PPM),Trace-element concentration,parts per million
+ER(PPM),Trace-element concentration,parts per million
+TM(PPM),Trace-element concentration,parts per million
+YB(PPM),Trace-element concentration,parts per million
+LU(PPM),Trace-element concentration,parts per million
+HF(PPM),Trace-element concentration,parts per million
+TA(PPM),Trace-element concentration,parts per million
+PB(PPM),Trace-element concentration,parts per million
+TH(PPM),Trace-element concentration,parts per million
+U(PPM),Trace-element concentration,parts per million
+source_file,Local provenance label for the source extract,text
+FE_TOTAL(WT%),Major-element concentration,weight percent
+LABEL,Harmonized tectonic class,categorical
+IOAB_REGION,Regional audit field for intra-oceanic arcs,text
+BABB_REGION,Regional audit field for back-arc basins,text
+DATABASE,Source synthesis database,GEOROC or PetDB
+PAPER_YEAR,Normalized source-publication year,year
+PAPER_FIRST_AUTHOR,Normalized first-author name,text
+PAPER_MATCH_KEY,Normalized cross-database matching key,text
+PAPER_DOI,Normalized source-publication DOI,DOI
+PAPER_RECORD_ID,Database-specific publication record identifier,text
+OLD_SET_V3,Previous frozen-split membership used for audit,categorical
+PAPER_ID,Verified source-publication identity,text
+PAPER_ID_STATUS,Publication-identity verification status,categorical
+CV_GROUP_V4,Publication-aware leakage-control group,text
+CV_GROUP_V4_BASIS,Evidence used to construct the group,categorical

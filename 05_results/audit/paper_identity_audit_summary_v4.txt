@@ -1,0 +1,20 @@
+Paper identity audit v4
+Input rows: 48403
+GEOROC rows: 43669
+PetDB rows: 4734
+Source citation records: 2441
+Evidence-based PAPER_ID values: 2430
+Leakage-aware CV_GROUP_V4 values: 2430
+Cross-database candidate pairs: 18
+Auto-confirmed candidate pairs: 4
+Verified-same candidate pairs: 7
+Verified-different candidate pairs: 7
+Unresolved manual-review candidate pairs: 0
+Candidate pairs crossing the old v3 split: 5
+Multi-label validation groups: 37
+
+Notes:
+- Blank DATABASE values were filled as GEOROC per author confirmation.
+- PAPER_ID merges require DOI or corroborated overlapping sample evidence.
+- Verified-different same-surname/year records remain separate.
+- CV_GROUP_V4 conservatively groups only unresolved cross-database candidates.

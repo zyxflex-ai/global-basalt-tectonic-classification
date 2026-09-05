@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software or processed dataset, please cite the repository and associated manuscript."
+title: "Publication-aware tectonic classification of global basalts"
+type: software
+authors:
+  - family-names: Zhang
+    given-names: Yuxuan
+    orcid: "https://orcid.org/0009-0004-0582-8349"
+    affiliation: "School of Earth Sciences and Engineering, China University of Petroleum-Beijing at Karamay"
+repository-code: "https://github.com/zyxflex-ai/global-basalt-tectonic-classification"
+url: "https://github.com/zyxflex-ai/global-basalt-tectonic-classification"
+license: MIT
+version: 1.0.0
+date-released: 2026-09-05
+keywords:
+  - basalt geochemistry
+  - tectonic discrimination
+  - publication-grouped validation
+  - data leakage
+  - machine learning
+  - explainable artificial intelligence
+

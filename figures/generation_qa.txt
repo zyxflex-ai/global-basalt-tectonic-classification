@@ -1,0 +1,58 @@
+G3 English figure-set generation report
+====================================================
+Backend: Python/Matplotlib only
+Source state: frozen v4 results; no model fitting was performed
+Figure width: approximately 183 mm
+Source text floor: 7 pt; panel labels: 9 pt
+Vector text: SVG fonttype none; PDF TrueType fonttype 42
+Dense point clouds: rasterized within vector containers; all observations retained
+Raster export: TIFF 600 dpi; PNG 300 dpi
+Figure 8 interval: 25th–75th percentile of SHAP values within feature-value quantile bins
+Figure 9 boundary status: digitized visual approximation; not used to calculate accuracy
+
+Outputs:
+Figure 1:
+  - figure1_data_split_flow_en.svg (13,720 bytes)
+  - figure1_data_split_flow_en.pdf (22,689 bytes)
+  - figure1_data_split_flow_en.tiff (1,322,506 bytes)
+  - figure1_data_split_flow_en.png (228,572 bytes)
+Figure 2:
+  - figure2_random_vs_grouped_cv_en.svg (79,732 bytes)
+  - figure2_random_vs_grouped_cv_en.pdf (51,497 bytes)
+  - figure2_random_vs_grouped_cv_en.tiff (1,004,738 bytes)
+  - figure2_random_vs_grouped_cv_en.png (235,428 bytes)
+Figure 3:
+  - figure3_confusion_matrix_en.svg (39,075 bytes)
+  - figure3_confusion_matrix_en.pdf (19,333 bytes)
+  - figure3_confusion_matrix_en.tiff (2,801,660 bytes)
+  - figure3_confusion_matrix_en.png (274,673 bytes)
+Figure 4:
+  - figure4_shap_global_importance_en.svg (13,810 bytes)
+  - figure4_shap_global_importance_en.pdf (14,601 bytes)
+  - figure4_shap_global_importance_en.tiff (720,124 bytes)
+  - figure4_shap_global_importance_en.png (58,721 bytes)
+Figure 5:
+  - figure5_shap_class_specific_en.svg (66,257 bytes)
+  - figure5_shap_class_specific_en.pdf (26,393 bytes)
+  - figure5_shap_class_specific_en.tiff (1,438,510 bytes)
+  - figure5_shap_class_specific_en.png (158,380 bytes)
+Figure 6:
+  - figure6_shap_direction_arc_en.svg (229,683 bytes)
+  - figure6_shap_direction_arc_en.pdf (162,960 bytes)
+  - figure6_shap_direction_arc_en.tiff (6,474,632 bytes)
+  - figure6_shap_direction_arc_en.png (1,081,830 bytes)
+Figure 7:
+  - figure7_shap_direction_nonarc_en.svg (247,101 bytes)
+  - figure7_shap_direction_nonarc_en.pdf (176,013 bytes)
+  - figure7_shap_direction_nonarc_en.tiff (6,972,990 bytes)
+  - figure7_shap_direction_nonarc_en.png (1,154,824 bytes)
+Figure 8:
+  - figure8_shap_dependence_en.svg (86,064 bytes)
+  - figure8_shap_dependence_en.pdf (30,537 bytes)
+  - figure8_shap_dependence_en.tiff (1,327,874 bytes)
+  - figure8_shap_dependence_en.png (294,655 bytes)
+Figure 9:
+  - figure9_ti_zr_y_en.svg (49,507 bytes)
+  - figure9_ti_zr_y_en.pdf (45,394 bytes)
+  - figure9_ti_zr_y_en.tiff (1,171,954 bytes)
+  - figure9_ti_zr_y_en.png (264,785 bytes)
