@@ -46,7 +46,7 @@ def describe_column(name: str) -> tuple[str, str]:
         "PAPER_ID_STATUS": ("Publication-identity verification status", "categorical"),
         "CV_GROUP_V4": ("Publication-aware leakage-control group", "text"),
         "CV_GROUP_V4_BASIS": ("Evidence used to construct the group", "categorical"),
-        "INNER_FOLD": ("Frozen grouped development fold", "integer 1-5"),
+        "INNER_FOLD": ("Frozen grouped development fold", "integer 0-4"),
         "N_STABLE50": ("Measured values among 19 Stable-50 predictors", "integer 0-19"),
     }
     return descriptions.get(name, ("Source metadata field", "text"))
@@ -57,18 +57,29 @@ def main() -> None:
     publication_columns = [
         "DATABASE",
         "PAPER_ID",
+        "CV_GROUP_V4",
         "PAPER_DOI",
         "CITATION",
         "PAPER_FIRST_AUTHOR",
         "PAPER_YEAR",
     ]
+    source_rows = data[publication_columns].fillna("")
+
+    def join_unique(values: pd.Series) -> str:
+        return "; ".join(sorted({str(value).strip() for value in values if str(value).strip()}))
+
     publications = (
-        data[publication_columns]
-        .fillna("")
-        .groupby(publication_columns, dropna=False, as_index=False)
-        .size()
-        .rename(columns={"size": "N_SAMPLES"})
-        .sort_values(["DATABASE", "PAPER_YEAR", "PAPER_FIRST_AUTHOR", "PAPER_ID"])
+        source_rows.groupby("PAPER_ID", dropna=False, as_index=False)
+        .agg(
+            DATABASE=("DATABASE", join_unique),
+            CV_GROUP_V4=("CV_GROUP_V4", join_unique),
+            PAPER_DOI=("PAPER_DOI", join_unique),
+            CITATION=("CITATION", join_unique),
+            PAPER_FIRST_AUTHOR=("PAPER_FIRST_AUTHOR", join_unique),
+            PAPER_YEAR=("PAPER_YEAR", join_unique),
+            N_SAMPLES=("PAPER_ID", "size"),
+        )
+        .sort_values(["PAPER_YEAR", "PAPER_FIRST_AUTHOR", "PAPER_ID"])
     )
     publications.to_csv(SOURCE_OUTPUT, index=False, encoding="utf-8-sig")
 
@@ -85,4 +96,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

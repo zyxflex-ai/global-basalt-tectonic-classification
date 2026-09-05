@@ -10,8 +10,6 @@ authors:
 repository-code: "https://github.com/zyxflex-ai/global-basalt-tectonic-classification"
 url: "https://github.com/zyxflex-ai/global-basalt-tectonic-classification"
 license: MIT
-version: 1.0.0
-date-released: 2026-09-05
 keywords:
   - basalt geochemistry
   - tectonic discrimination
@@ -19,4 +17,3 @@ keywords:
   - data leakage
   - machine learning
   - explainable artificial intelligence
-

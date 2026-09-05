@@ -10,7 +10,7 @@ this directory. The principal fields are summarized below.
 | `CITATION`, `PAPER_DOI` | Original publication attribution | text / DOI |
 | `PAPER_ID` | Verified source-publication identity | text |
 | `CV_GROUP_V4` | Leakage-control grouping unit | text |
-| `INNER_FOLD` | Frozen grouped development fold | integer 1–5 |
+| `INNER_FOLD` | Frozen grouped development fold | integer 0–4 |
 | `LABEL` | Harmonized tectonic class | CAB, IAB, IOAB, BABB, MORB, OIB, OPB, CFB |
 | `SIO2(WT%)` ... `FE_TOTAL(WT%)` | Major-element concentrations | weight percent |
 | `SC(PPM)` ... `U(PPM)` | Trace-element concentrations | parts per million |
@@ -19,4 +19,3 @@ this directory. The principal fields are summarized below.
 
 Blank numeric cells are missing measurements. No zero or sentinel value is used
 to represent missingness in the processed analysis files.
-

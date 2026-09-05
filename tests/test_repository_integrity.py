@@ -3,7 +3,9 @@
 from __future__ import annotations
 
 from pathlib import Path
+import json
 
+import numpy as np
 import pandas as pd
 
 
@@ -48,6 +50,14 @@ def main() -> None:
     require(inner["INNER_FOLD"].between(0, 4).all(), "Invalid inner-fold assignment")
     require(inner.groupby("CV_GROUP_V4")["INNER_FOLD"].nunique().max() == 1, "A group crosses inner folds")
 
+    publications = pd.read_csv(ROOT / "references" / "source_publications.csv")
+    require(len(publications) == 2_430, "Attribution table must contain one row per publication group")
+    require(publications["PAPER_ID"].is_unique, "Duplicate PAPER_ID in attribution table")
+    require(
+        publications["CV_GROUP_V4"].str.contains(";").sum() == 0,
+        "A publication identity maps to multiple CV groups",
+    )
+
     expected_classes = {
         "CAB": 865,
         "IAB": 2706,
@@ -66,6 +76,36 @@ def main() -> None:
     xgb = metrics[(metrics["model"] == "XGBoost") & (metrics["level"] == "overall")].iloc[0]
     require(abs(xgb["macro_f1"] - 0.7386430582) < 1e-9, "XGBoost macro-F1 changed")
     require(abs(xgb["balanced_accuracy"] - 0.7373851153) < 1e-9, "Balanced accuracy changed")
+
+    model_file = ROOT / "models" / "xgboost_stable50_v4.ubj"
+    metadata_file = ROOT / "models" / "xgboost_stable50_v4.metadata.json"
+    require(model_file.is_file(), "Frozen XGBoost model is missing")
+    require(metadata_file.is_file(), "Frozen model metadata are missing")
+    metadata = json.loads(metadata_file.read_text(encoding="utf-8"))
+    require(metadata["artifact"] == model_file.name, "Model metadata artifact name changed")
+    require(len(metadata["features_in_order"]) == 19, "Frozen model feature count changed")
+    require(metadata["class_order"] == ["CAB", "IAB", "IOAB", "BABB", "MORB", "OIB", "OPB", "CFB"], "Class order changed")
+
+    predictions = pd.read_csv(
+        ROOT / "05_results" / "final_test" / "final_independent_test_predictions_v4.csv",
+        encoding="utf-8-sig",
+        low_memory=False,
+    )
+    require(len(predictions) == 10_086, "Holdout prediction row count changed")
+
+    with np.load(
+        ROOT / "05_results" / "figures" / "shap_direction" / "stable50_independent_test_shap_values_v4.npz",
+        allow_pickle=False,
+    ) as shap_cache:
+        require(shap_cache["shap_values"].shape == (10_086, 19, 8), "SHAP cache shape changed")
+        require(shap_cache["feature_values"].shape == (10_086, 19), "SHAP feature-value shape changed")
+
+    required_guides = [
+        ROOT / "docs" / "QUICKSTART.md",
+        ROOT / "docs" / "USER_GUIDE.md",
+        ROOT / "docs" / "SUBMISSION_READINESS.md",
+    ]
+    require(all(path.is_file() for path in required_guides), "A required repository guide is missing")
 
     print("Repository integrity checks passed.")
     print("48,403 samples; 2,430 publication groups; no train-holdout group leakage.")

@@ -11,8 +11,6 @@ env/
 Thumbs.db
 *.log
 *.tmp
+quickstart_predictions.csv
 05_results/diagnosis/*predictions*.csv
-05_results/final_test/*predictions*.csv
 05_results/validation_bias/*predictions*.csv
-05_results/figures/shap_direction/*shap_values*.npz
-

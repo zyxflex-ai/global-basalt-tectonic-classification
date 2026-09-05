@@ -13,8 +13,10 @@ The repository separates four reproducibility levels:
 4. **Interpretation and figures** reproduces SHAP summaries and publication
    figures.
 
-The code was executed with Python 3.13.9 on Windows. Random seeds and fixed fold
-assignments are stored in the scripts and CSV files.
+The original analysis was executed with Python 3.13.9 on Windows. The release
+audit and frozen-model export were repeated with Python 3.12.14 and reproduced
+the holdout metrics exactly. Random seeds and fixed fold assignments are stored
+in the scripts and CSV files.
 
 ## Frozen datasets
 
@@ -88,5 +90,5 @@ manuscript.
 - Publication-cluster uncertainty uses 2,000 resamples; paired model comparisons
   use 5,000 resamples.
 - SHAP arrays and sample-level predictions can be regenerated but are not all
-  tracked because they are large intermediate files.
-
+  tracked when they are unused intermediate files. The sample-level predictions
+  and SHAP cache required by the manuscript figures are included.

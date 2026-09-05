@@ -29,6 +29,9 @@ STAGES = {
         "20_final_test_bootstrap_ci_v4.py",
         "21_paired_bootstrap_model_compare_v4.py",
     ],
+    "model-export": [
+        "51_export_xgb_model_v4.py",
+    ],
     "interpretation": [
         "22_shap_global_independent_test_v4.py",
         "23_shap_direction_class_specific_v4.py",
@@ -59,6 +62,7 @@ def ordered_scripts(stage: str) -> list[str]:
             "validation-bias",
             "development",
             "holdout",
+            "model-export",
             "interpretation",
             "sensitivity",
             "figures",
@@ -92,4 +96,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

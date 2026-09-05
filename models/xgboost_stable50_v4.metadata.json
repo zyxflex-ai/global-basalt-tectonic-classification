@@ -1,0 +1,75 @@
+{
+  "model_name": "Frozen Stable-50 XGBoost tectonic-setting classifier",
+  "artifact": "xgboost_stable50_v4.ubj",
+  "model_sha256": "e466a784595eaab2f9f86f8c0c0b0182649204ada4edc3f23247f5d9239a309e",
+  "training_data": "03_model_data/Basalt_train_stable50_main_v4.csv",
+  "training_data_sha256": "aad4fb98e8cfc1e496507a25194461e96ffb2c420544099e1eeadd141b6b982d",
+  "training_rows": 35865,
+  "class_order": [
+    "CAB",
+    "IAB",
+    "IOAB",
+    "BABB",
+    "MORB",
+    "OIB",
+    "OPB",
+    "CFB"
+  ],
+  "features_in_order": [
+    "SIO2(WT%)",
+    "TIO2(WT%)",
+    "AL2O3(WT%)",
+    "FE_TOTAL(WT%)",
+    "CAO(WT%)",
+    "MGO(WT%)",
+    "MNO(WT%)",
+    "K2O(WT%)",
+    "NA2O(WT%)",
+    "P2O5(WT%)",
+    "V(PPM)",
+    "CR(PPM)",
+    "NI(PPM)",
+    "RB(PPM)",
+    "SR(PPM)",
+    "Y(PPM)",
+    "ZR(PPM)",
+    "NB(PPM)",
+    "BA(PPM)"
+  ],
+  "minimum_measured_features": 10,
+  "missing_value_representation": "blank CSV cell parsed as NaN",
+  "parameters": {
+    "objective": "multi:softprob",
+    "num_class": 8,
+    "n_estimators": 1400,
+    "learning_rate": 0.02,
+    "max_depth": 6,
+    "min_child_weight": 1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.7,
+    "reg_alpha": 0.0,
+    "reg_lambda": 1.0,
+    "tree_method": "hist",
+    "eval_metric": "mlogloss",
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "software": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.7.2",
+    "xgboost": "3.4.0"
+  },
+  "holdout_metrics": {
+    "accuracy": 0.8517747372595678,
+    "balanced_accuracy": 0.7373851152961828,
+    "macro_f1": 0.7386430582045277
+  },
+  "intended_use": "Research evaluation of the eight-class global-basalt workflow.",
+  "limitations": [
+    "Predictions are valid only for rows satisfying the Stable-50 10-of-19 measurement rule.",
+    "The model is not a substitute for geological interpretation or field context.",
+    "Performance outside the represented publication and geochemical domains is not established."
+  ]
+}
