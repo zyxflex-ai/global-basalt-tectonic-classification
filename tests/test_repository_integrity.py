@@ -58,6 +58,21 @@ def main() -> None:
         "A publication identity maps to multiple CV groups",
     )
 
+    petdb_records = pd.read_csv(ROOT / "references" / "petdb_source_records.csv")
+    require(len(petdb_records) == 303, "Unexpected PetDB publication-record count")
+    require(petdb_records["PAPER_RECORD_ID"].is_unique, "Duplicate PetDB publication record")
+    require(petdb_records["N_RETAINED_SAMPLES"].sum() == 4_734, "Unexpected retained PetDB count")
+    require(
+        petdb_records["N_RETAINED_SAMPLES"].eq(petdb_records["N_UNIQUE_SAMPLE_URLS"]).all(),
+        "A retained PetDB sample URL is duplicated",
+    )
+    require(
+        petdb_records["PETDB_CITATION_URL"].str.startswith(
+            "https://www.earthchem.org/petdb/citation/"
+        ).all(),
+        "Invalid PetDB citation URL",
+    )
+
     expected_classes = {
         "CAB": 865,
         "IAB": 2706,

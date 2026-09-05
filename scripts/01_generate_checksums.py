@@ -21,6 +21,7 @@ TARGETS = [
     "05_results/figures/shap_direction/stable50_independent_test_shap_values_v4.npz",
     "models/xgboost_stable50_v4.ubj",
     "models/xgboost_stable50_v4.metadata.json",
+    "references/petdb_source_records.csv",
     "references/source_publications.csv",
 ]
 

@@ -81,6 +81,8 @@ workflow benefits from a multicore CPU and may take several hours.
   units, coding, and missing-value rules.
 - [`docs/SUBMISSION_READINESS.md`](docs/SUBMISSION_READINESS.md): completed
   checks and the remaining public-release actions.
+- [`docs/PETDB_LICENSE_AUDIT.md`](docs/PETDB_LICENSE_AUDIT.md): PetDB provenance,
+  attribution, licence boundaries, and release conditions.
 
 ## Quick verification
 
@@ -136,12 +138,16 @@ The compiled records were downloaded from
 [GEOROC](https://georoc.eu/) and [PetDB/EarthChem](https://earthchem.org/petdb)
 between 7 and 11 August 2026. GEOROC-derived data must be distributed under
 CC BY-SA 4.0 with attribution to GEOROC and the original data sources. EarthChem
-materials remain subject to the licence and citation terms attached to their
-source records. See [`DATA_LICENSE.md`](DATA_LICENSE.md) before reuse.
+materials remain subject to the applicable EarthChem and source-record terms;
+this repository does not assign a new uniform licence to PetDB-derived values.
+See [`DATA_LICENSE.md`](DATA_LICENSE.md) before reuse.
 
 The file `references/source_publications.csv` maps every retained publication
 group to its database, citation, DOI when available, and sample count. This is
-provided to support attribution to the original data producers.
+provided to support attribution to the original data producers. The companion
+file `references/petdb_source_records.csv` maps all 303 retained PetDB
+publication records to their PetDB citation URLs and verified download
+provenance.
 
 ## Citation
 

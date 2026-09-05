@@ -14,14 +14,15 @@ Audit date: 2026-09-05
 - English code comments and no ZIP, RAR, or 7z archive used as the repository.
 - Automated checks for counts, class balance, publication-group isolation,
   attribution cardinality, headline metrics, and model metadata.
+- Exact provenance audit for all 4,734 retained PetDB rows and 303 PetDB
+  publication records.
 
 ## Required before submission
 
 - Make the GitHub repository public; Computers & Geosciences requires public
   repository access at submission.
-- Complete the row/source-level PetDB/EarthChem licence check before changing
-  repository visibility. The current notice does not create rights that the
-  original records do not grant.
+- Preserve the PetDB licence boundary and attribution files when the repository
+  becomes public; do not apply a new uniform licence to PetDB-derived values.
 - Ensure the manuscript Data Availability and Code Availability text matches the
   released files exactly.
 
@@ -31,6 +32,9 @@ Audit date: 2026-09-05
 - Archive that release in a durable repository such as Zenodo and replace any
   pending DOI fields in the manuscript and repository metadata with the assigned
   identifier.
+- Obtain written confirmation from EarthChem that the processed, attributed
+  PetDB subset may be redistributed without applying a new licence to those
+  values; retain the reply with the project records.
 - Test the public URL and, if created, the DOI while signed out of the author's
   account.
 
