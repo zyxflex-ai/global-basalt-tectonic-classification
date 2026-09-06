@@ -160,5 +160,5 @@ added after the first public release is deposited in Zenodo.
 Yuxuan Zhang  
 School of Earth Sciences and Engineering, China University of
 Petroleum-Beijing at Karamay, Karamay 834000, Xinjiang, China  
-Email: 3380827355@qq.com  
+Email: 2025015169@st.cupk.edu.cn  
 ORCID: https://orcid.org/0009-0004-0582-8349
