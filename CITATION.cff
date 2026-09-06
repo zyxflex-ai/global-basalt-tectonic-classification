@@ -8,7 +8,10 @@ authors:
     orcid: "https://orcid.org/0009-0004-0582-8349"
     affiliation: "School of Earth Sciences and Engineering, China University of Petroleum-Beijing at Karamay"
 repository-code: "https://github.com/zyxflex-ai/global-basalt-tectonic-classification"
-url: "https://github.com/zyxflex-ai/global-basalt-tectonic-classification"
+url: "https://doi.org/10.5281/zenodo.22478958"
+doi: "10.5281/zenodo.22478958"
+version: "1.0.0"
+date-released: "2026-09-06"
 license: MIT
 keywords:
   - basalt geochemistry

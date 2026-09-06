@@ -1,6 +1,6 @@
 # Computers & Geosciences repository readiness
 
-Audit date: 2026-09-05
+Audit date: 2026-09-06
 
 ## Completed
 
@@ -16,6 +16,8 @@ Audit date: 2026-09-05
   attribution cardinality, headline metrics, and model metadata.
 - Exact provenance audit for all 4,734 retained PetDB rows and 303 PetDB
   publication records.
+- Public GitHub release `v1.0.0`, archived in Zenodo under the version DOI
+  https://doi.org/10.5281/zenodo.22478958.
 
 ## Required before submission
 
@@ -28,18 +30,15 @@ Audit date: 2026-09-05
 
 ## Recommended before or at submission
 
-- Create a tagged GitHub release after the manuscript analysis is frozen.
-- Archive that release in a durable repository such as Zenodo and replace any
-  pending DOI fields in the manuscript and repository metadata with the assigned
-  identifier.
 - Obtain written confirmation from EarthChem that the processed, attributed
   PetDB subset may be redistributed without applying a new licence to those
   values; retain the reply with the project records.
-- Test the public URL and, if created, the DOI while signed out of the author's
-  account.
+- Test the public GitHub URL and Zenodo version DOI while signed out of the
+  author's account.
 
 ## Release rule
 
-Do not create a `v1.0.0` release or claim a release date in `CITATION.cff` until
-the final public artifact exists. Add the actual version, release date, and DOI
-only after they have been assigned.
+Release `v1.0.0` was archived on 2026-09-06. Manuscript citations should use the
+version DOI https://doi.org/10.5281/zenodo.22478958 so that the cited files remain
+fixed; the concept DOI https://doi.org/10.5281/zenodo.22478957 may be used when a
+link to the newest available release is intended.
