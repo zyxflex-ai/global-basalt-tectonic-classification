@@ -169,13 +169,12 @@ provenance.
 Please cite the associated manuscript and the archived repository release:
 
 > Zhang, Y. (2026). *Publication-aware tectonic classification of global
-> basalts* [Software]. Zenodo.
-> https://doi.org/10.5281/zenodo.22478957
+> basalts* (Version 1.1.0) [Software]. Zenodo.
+> https://doi.org/10.5281/zenodo.22898634
 
 Citation metadata are provided in [`CITATION.cff`](CITATION.cff). The DOI above
-is the concept DOI and resolves to the newest archived release. After Zenodo
-archives `v1.1.0`, its version-specific DOI should be used in the manuscript so
-that the cited files remain fixed.
+identifies the exact `v1.1.0` release used for the manuscript; the Zenodo concept
+DOI for all versions is https://doi.org/10.5281/zenodo.22478957.
 
 ## Contact
 

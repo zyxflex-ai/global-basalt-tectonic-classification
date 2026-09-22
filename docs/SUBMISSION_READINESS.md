@@ -18,6 +18,8 @@ Audit date: 2026-09-22
   publication records.
 - Public GitHub release `v1.0.0`, archived in Zenodo under the version DOI
   https://doi.org/10.5281/zenodo.22478958.
+- Public GitHub release `v1.1.0`, archived in Zenodo under the version DOI
+  https://doi.org/10.5281/zenodo.22898634.
 - Fully time-closed temporal validation, direct Stable-50 missingness comparison,
   label-boundary sensitivity, recoverable label mapping, and
   database-by-class-by-time support tables added for the JES revision.
@@ -25,10 +27,6 @@ Audit date: 2026-09-22
 
 ## Required before submission
 
-- Create a versioned GitHub release from the v9 revision.
-- Archive that release in Zenodo and cite its new version DOI in the final
-  manuscript if the archive receives a new DOI; do not overwrite the existing
-  immutable v1.0.0 DOI.
 - Preserve the PetDB licence boundary and attribution files when the repository
   becomes public; do not apply a new uniform licence to PetDB-derived values.
 - Ensure the manuscript Data Availability and Code Availability text matches the
@@ -45,7 +43,8 @@ Audit date: 2026-09-22
 
 ## Release rule
 
-Release `v1.0.0` was archived on 2026-09-06. Manuscript citations should use the
-version DOI https://doi.org/10.5281/zenodo.22478958 so that the cited files remain
+Release `v1.0.0` was archived on 2026-09-06 and remains immutable. Release
+`v1.1.0` was archived on 2026-09-22. Manuscript citations should use the `v1.1.0`
+version DOI https://doi.org/10.5281/zenodo.22898634 so that the cited files remain
 fixed; the concept DOI https://doi.org/10.5281/zenodo.22478957 may be used when a
 link to the newest available release is intended.
