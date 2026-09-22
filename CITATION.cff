@@ -2,6 +2,7 @@ cff-version: 1.2.0
 message: "If you use this software or processed dataset, please cite the repository and associated manuscript."
 title: "Publication-aware tectonic classification of global basalts"
 type: software
+abstract: "Reproducible data-processing, publication-grouped validation, temporal testing, source-coverage analysis, model artefacts, and figure-generation resources for global basalt tectonic classification. The MIT licence applies only to original software. GEOROC-derived processed data and figures are subject to CC BY-SA 4.0, while PetDB-derived measurements remain subject to EarthChem and original source-record terms as documented in DATA_LICENSE.md."
 authors:
   - family-names: Zhang
     given-names: Yuxuan
