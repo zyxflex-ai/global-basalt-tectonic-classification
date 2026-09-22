@@ -21,10 +21,11 @@ Audit date: 2026-09-22
 - Fully time-closed temporal validation, direct Stable-50 missingness comparison,
   label-boundary sensitivity, recoverable label mapping, and
   database-by-class-by-time support tables added for the JES revision.
+- JES v9 analysis revision pushed to `main` in commit `f544767`.
 
 ## Required before submission
 
-- Push the v9 revision commit and create a versioned GitHub release.
+- Create a versioned GitHub release from the v9 revision.
 - Archive that release in Zenodo and cite its new version DOI in the final
   manuscript if the archive receives a new DOI; do not overwrite the existing
   immutable v1.0.0 DOI.
