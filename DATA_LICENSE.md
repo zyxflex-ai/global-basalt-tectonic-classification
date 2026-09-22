@@ -31,6 +31,13 @@ a new uniform licence to the PetDB-derived measurements. Those values remain
 subject to the applicable EarthChem and source-record terms. The original
 software licence in `LICENSE` does not extend to them.
 
+EarthChem's published Terms of Use provide the governing reuse route for this
+release. This repository does not claim a separate individual authorization
+from EarthChem. A clarification request was acknowledged under ticket 20691;
+no substantive response had been received as of 22 September 2026. The absence
+of a separate reply does not change the attribution and licence boundaries
+stated above.
+
 - PetDB: https://earthchem.org/petdb
 - EarthChem terms: https://earthchem.org/legal/terms-of-use
 - Provenance and licence audit: `docs/PETDB_LICENSE_AUDIT.md`

@@ -1,15 +1,16 @@
 # PetDB provenance and licence audit
 
-Audit date: 2026-09-05
+Audit date: 2026-09-22
 
 ## Decision
 
-The PetDB-derived subset is traceable and may be used for academic publication
-under the current EarthChem terms when the portal, download date, and original
-contributors are adequately cited. The repository must not assign a new uniform
-licence to the PetDB-derived measurements because the portal export does not
-contain record-level licence fields and EarthChem states that its digital
-materials may use varying Creative Commons licences.
+The PetDB-derived subset is traceable. EarthChem's published Terms of Use permit
+circulation or publication of materials obtained through its systems when the
+applicable citation requirements are met. The repository must not assign a new
+uniform licence to the PetDB-derived measurements because the portal export does
+not contain record-level licence fields and EarthChem states that its digital
+materials may use varying Creative Commons licences. This audit relies on the
+published terms and does not claim a separate individual authorization.
 
 ## Scope and provenance checks
 
@@ -61,15 +62,20 @@ Official sources:
    samples classified as basalt or tholeiite; do not claim these were the exact
    portal query parameters unless the author can confirm them.
 
-## Residual risk
+## Due-diligence correspondence and residual risk
 
-The current terms support academic use and publication with attribution, but
-the portal CSV does not expose a uniform licence for every synthesized record.
-For the strongest documentary record, the author should request written
-confirmation from `info@earthchem.org` that a processed, attributed subset may
-be redistributed in a public GitHub/Zenodo research repository without applying
-a new licence to the PetDB-derived values. This confirmation is recommended
-before the final versioned release.
+The author asked EarthChem to clarify redistribution of the processed,
+attributed subset. EarthChem acknowledged the request under ticket 20691, but no
+substantive response had been received as of 22 September 2026. The published
+Terms of Use therefore remain the documented basis for circulation and
+publication. A later individualized reply should be retained with the project
+records, but it is not represented here as a prerequisite or as permission
+already granted.
+
+The remaining risk is that the portal CSV does not expose a uniform
+record-level licence for every synthesized record. The release addresses this
+by preserving database identity and original citations, applying no new licence
+to PetDB-derived measurements, and limiting the MIT licence to original code.
 
 ## Manuscript-ready availability wording
 
@@ -85,8 +91,11 @@ The source records were compiled from GEOROC (https://georoc.eu/) and PetDB
 downloaded on 11 August 2026. Database identifiers, source-publication
 citations, and PetDB citation URLs are retained in the repository attribution
 tables. GEOROC-derived records are provided under CC BY-SA 4.0. PetDB-derived
-measurements are not relicensed by the author and remain subject to the
-applicable EarthChem and source-record terms.
+records are provided in accordance with EarthChem's published Terms of Use
+(https://earthchem.org/legal/terms-of-use), with database attribution, the
+download date, and retained source-publication citations. The author asserts no
+additional licence over those measurements and does not claim individual
+authorization from EarthChem.
 
 ### Code Availability
 

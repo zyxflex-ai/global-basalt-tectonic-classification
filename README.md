@@ -150,7 +150,11 @@ The compiled records were downloaded from
 between 7 and 11 August 2026. GEOROC-derived data must be distributed under
 CC BY-SA 4.0 with attribution to GEOROC and the original data sources. EarthChem
 materials remain subject to the applicable EarthChem and source-record terms;
-this repository does not assign a new uniform licence to PetDB-derived values.
+this repository does not assign a new uniform licence to PetDB-derived values
+or claim an individualized authorization from EarthChem. The release follows
+EarthChem's published [Terms of Use](https://earthchem.org/legal/terms-of-use)
+and preserves the download date, database attribution, and source-publication
+citations.
 See [`DATA_LICENSE.md`](DATA_LICENSE.md) before reuse.
 
 The file `references/source_publications.csv` maps every retained publication

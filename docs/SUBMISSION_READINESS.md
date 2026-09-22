@@ -21,7 +21,7 @@ Audit date: 2026-09-22
 - Fully time-closed temporal validation, direct Stable-50 missingness comparison,
   label-boundary sensitivity, recoverable label mapping, and
   database-by-class-by-time support tables added for the JES revision.
-- JES v9 analysis revision pushed to `main` in commit `f544767`.
+- JES v9 analysis revision and subsequent integrity updates are on `main`.
 
 ## Required before submission
 
@@ -36,9 +36,10 @@ Audit date: 2026-09-22
 
 ## Recommended before or at submission
 
-- Obtain written confirmation from EarthChem that the processed, attributed
-  PetDB subset may be redistributed without applying a new licence to those
-  values; retain the reply with the project records.
+- Retain EarthChem ticket 20691 and any later substantive reply with the project
+  records. Under the published Terms of Use, individualized confirmation is not
+  treated as a release prerequisite; do not state that EarthChem granted
+  bespoke permission.
 - Test the public GitHub URL and Zenodo version DOI while signed out of the
   author's account.
 
