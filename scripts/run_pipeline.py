@@ -44,6 +44,14 @@ STAGES = {
         "28_xgb_full40_feature_sensitivity_v4.py",
         "29_xgb_full40_missingness_diagnosis_v4.py",
         "30_final_full40_independent_test_v4.py",
+        "82_stable50_missingness_comparison_v9.py",
+        "85_label_boundary_sensitivity_v9.py",
+    ],
+    "temporal-v9": [
+        "81_time_closed_temporal_validation_v9.py",
+    ],
+    "audit-v9": [
+        "83_build_label_and_support_audits_v9.py",
     ],
     "figures": [
         "31_plot_final_confusion_matrix_vertical_labels_v4.py",
@@ -52,6 +60,7 @@ STAGES = {
         "34_plot_shap_direction_2x2_v4.py",
         "35_plot_shap_dependence_2x2_v4.py",
         "36_plot_ti_zr_y_discrimination_v4.py",
+        "86_build_jes_v9_figure6.py",
     ],
 }
 
@@ -65,6 +74,8 @@ def ordered_scripts(stage: str) -> list[str]:
             "model-export",
             "interpretation",
             "sensitivity",
+            "temporal-v9",
+            "audit-v9",
             "figures",
         ]
         return [name for item in order for name in STAGES[item]]

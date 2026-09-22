@@ -12,6 +12,9 @@ The repository separates four reproducibility levels:
    analyses.
 4. **Interpretation and figures** reproduces SHAP summaries and publication
    figures.
+5. **Time-closed validation and label audit** repeats all data-dependent model
+   choices within publications dated 2010 or earlier, evaluates 2011-2025
+   publications once, and exports machine-readable label and support audits.
 
 The original analysis was executed with Python 3.13.9 on Windows. The release
 audit and frozen-model export were repeated with Python 3.12.14 and reproduced
@@ -69,6 +72,25 @@ Run scripts `22` through `25` for SHAP calculations and robustness checks, then
 scripts `31` through `36` for the principal diagnostic figures. Existing figure
 source tables and final figures are included.
 
+### Fully time-closed validation and v9 audits
+
+```bash
+python scripts/run_pipeline.py --stage temporal-v9
+python scripts/run_pipeline.py --stage audit-v9
+```
+
+Script `81` selects features within each early-period tuning fold, compares 12
+XGBoost configurations by fourfold stratified publication-group validation,
+refits on publications dated through 2010, and evaluates publications dated
+2011-2025. Script `82` directly compares native XGBoost missing-value handling
+with training-fold median imputation on identical grouped folds. Scripts `83`
+exports the recoverable label mapping, database-class-time-location support, and
+multi-label publication groups. Optional script `84` audits comparator-prefixed
+tokens when the original raw-download directory is supplied with `--raw-root`;
+the raw third-party downloads are not redistributed here. Script `85`
+recalculates frozen-holdout metrics after collapsing selected adjacent
+operational labels without refitting the model.
+
 ## Expected principal results
 
 | Evaluation | Accuracy | Balanced accuracy | Macro-F1 |
@@ -78,6 +100,7 @@ source tables and final figures are included.
 | Frozen-holdout XGBoost | 0.8518 | 0.7374 | 0.7386 |
 | Frozen-holdout random forest | 0.8386 | 0.6571 | 0.6899 |
 | Frozen-holdout RBF-SVM | 0.8256 | 0.6556 | 0.6716 |
+| Time-closed 2011-2025 XGBoost | 0.8314 | 0.7050 | 0.6962 |
 
 Small floating-point differences may occur across operating systems and CPU
 libraries. The frozen CSV result tables are the values reported in the
@@ -92,3 +115,6 @@ manuscript.
 - SHAP arrays and sample-level predictions can be regenerated but are not all
   tracked when they are unused intermediate files. The sample-level predictions
   and SHAP cache required by the manuscript figures are included.
+- The paired model-comparison tables report effect differences and percentile
+  intervals. The revised manuscript does not interpret uncentered bootstrap
+  tail proportions as null-hypothesis P values.

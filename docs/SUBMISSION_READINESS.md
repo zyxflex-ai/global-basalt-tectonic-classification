@@ -1,6 +1,6 @@
-# Computers & Geosciences repository readiness
+# Journal of Earth Science repository readiness
 
-Audit date: 2026-09-06
+Audit date: 2026-09-22
 
 ## Completed
 
@@ -18,11 +18,16 @@ Audit date: 2026-09-06
   publication records.
 - Public GitHub release `v1.0.0`, archived in Zenodo under the version DOI
   https://doi.org/10.5281/zenodo.22478958.
+- Fully time-closed temporal validation, direct Stable-50 missingness comparison,
+  label-boundary sensitivity, recoverable label mapping, and
+  database-by-class-by-time support tables added for the JES revision.
 
 ## Required before submission
 
-- Make the GitHub repository public; Computers & Geosciences requires public
-  repository access at submission.
+- Push the v9 revision commit and create a versioned GitHub release.
+- Archive that release in Zenodo and cite its new version DOI in the final
+  manuscript if the archive receives a new DOI; do not overwrite the existing
+  immutable v1.0.0 DOI.
 - Preserve the PetDB licence boundary and attribution files when the repository
   becomes public; do not apply a new uniform licence to PetDB-derived values.
 - Ensure the manuscript Data Availability and Code Availability text matches the

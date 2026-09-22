@@ -1,8 +1,9 @@
 # Publication-aware tectonic classification of global basalts
 
 This repository contains the data, code, result tables, and figure assets for
-the manuscript **“Publication-Grouped Validation Reveals Optimistic Bias in
-Machine-Learning Tectonic Classification of Global Basalts.”**
+the manuscript **“Publication-Grouped and Temporal Validation Reveals
+Generalization Limits in Tectonic Classification of Global Basalt
+Geochemistry.”**
 
 The central computational result is that sample-random cross-validation can
 substantially overestimate performance when samples from the same source
@@ -19,6 +20,10 @@ reserves a frozen holdout containing previously unseen publication groups.
 - Median macro-F1 inflation: 0.1873 (publication-cluster bootstrap).
 - Frozen-holdout XGBoost macro-F1: 0.7386.
 - Frozen-holdout XGBoost balanced accuracy: 0.7374.
+- Fully time-closed 2011-2025 test accuracy: 0.8314.
+- Fully time-closed 2011-2025 test macro-F1: 0.6962.
+- Native missing-value handling and fold-median imputation differed by only
+  0.0023 mean macro-F1 on identical grouped folds.
 
 ## Repository contents
 
@@ -131,6 +136,12 @@ Full model tuning and SHAP analysis are computationally intensive. The frozen
 model, sample-level holdout predictions, signed SHAP cache, result tables, and
 publication figures are included so reviewers can inspect or regenerate the
 reported evidence without rerunning every expensive step.
+
+The `temporal-v9` stage is a separate, fully time-closed analysis. It restricts
+feature selection, completeness filtering, hyperparameter selection, and model
+fitting to publications dated 2010 or earlier before evaluating publications
+dated 2011-2025. The accompanying `audit-v9` stage exports the recoverable
+source-file-to-label mapping and database-by-class-by-time support tables.
 
 ## Data provenance and licensing
 
