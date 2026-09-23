@@ -20,6 +20,8 @@ Audit date: 2026-09-22
   https://doi.org/10.5281/zenodo.22478958.
 - Public GitHub release `v1.1.0`, archived in Zenodo under the version DOI
   https://doi.org/10.5281/zenodo.22898634.
+- Public GitHub release `v1.1.1`, archived in Zenodo under the version DOI
+  https://doi.org/10.5281/zenodo.22920294.
 - Fully time-closed temporal validation, direct Stable-50 missingness comparison,
   label-boundary sensitivity, recoverable label mapping, and
   database-by-class-by-time support tables added for the JES revision.
@@ -44,7 +46,8 @@ Audit date: 2026-09-22
 ## Release rule
 
 Release `v1.0.0` was archived on 2026-09-06 and remains immutable. Release
-`v1.1.0` was archived on 2026-09-22. Manuscript citations should use the `v1.1.0`
-version DOI https://doi.org/10.5281/zenodo.22898634 so that the cited files remain
+`v1.1.0` was archived on 2026-09-22, and `v1.1.1` was archived on 2026-09-23.
+Manuscript citations should use the `v1.1.1` version DOI
+https://doi.org/10.5281/zenodo.22920294 so that the cited files remain
 fixed; the concept DOI https://doi.org/10.5281/zenodo.22478957 may be used when a
 link to the newest available release is intended.

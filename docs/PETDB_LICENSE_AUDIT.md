@@ -84,7 +84,7 @@ to PetDB-derived measurements, and limiting the MIT licence to original code.
 The processed data supporting this study, frozen development and holdout
 partitions, sample-level holdout predictions, and source data underlying the
 figures are available at
-https://doi.org/10.5281/zenodo.22898634, with the associated development
+https://doi.org/10.5281/zenodo.22920294, with the associated development
 repository at https://github.com/zyxflex-ai/global-basalt-tectonic-classification.
 The source records were compiled from GEOROC (https://georoc.eu/) and PetDB
 (https://earthchem.org/petdb) between 7 and 11 August 2026. PetDB data were
@@ -102,7 +102,7 @@ authorization from EarthChem.
 All analysis and figure-generation scripts, pinned software dependencies,
 integrity tests, a trained XGBoost model, model metadata, and tested usage
 examples are available at
-https://doi.org/10.5281/zenodo.22898634, with ongoing development at
+https://doi.org/10.5281/zenodo.22920294, with ongoing development at
 https://github.com/zyxflex-ai/global-basalt-tectonic-classification. The
 author's original code is released under the MIT License. The repository README,
 quick-start tutorial, user guide, and reproducibility guide document the inputs,
