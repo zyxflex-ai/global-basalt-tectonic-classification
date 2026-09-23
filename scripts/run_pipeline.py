@@ -29,6 +29,10 @@ STAGES = {
         "20_final_test_bootstrap_ci_v4.py",
         "21_paired_bootstrap_model_compare_v4.py",
     ],
+    "publication-heterogeneity": [
+        "65_publication_heterogeneity_v4.py",
+        "66_plot_publication_heterogeneity_v4.py",
+    ],
     "model-export": [
         "51_export_xgb_model_v4.py",
     ],
@@ -71,6 +75,7 @@ def ordered_scripts(stage: str) -> list[str]:
             "validation-bias",
             "development",
             "holdout",
+            "publication-heterogeneity",
             "model-export",
             "interpretation",
             "sensitivity",

@@ -1,0 +1,4 @@
+database,n_publications,n_samples,publication_equal_mean_accuracy,publication_median_accuracy
+GEOROC,400,9325,0.7839133697263959,0.9561904761904761
+GEOROC+PetDB,1,4,0.75,0.75
+PetDB,61,757,0.8588353313353313,1.0

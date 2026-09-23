@@ -33,7 +33,7 @@ reserves a frozen holdout containing previously unseen publication groups.
 |-- 03_model_data/             Stable-50 development and frozen-holdout data
 |-- 04_split/                  Inner-CV folds and frozen split manifest
 |-- 05_results/                Audits, metrics, source tables, and summaries
-|-- figures/                   Submission figures in PNG, SVG, and PDF
+|-- figures/                   Publication figures and final JES_v9 render bundle
 |-- scripts/                   Analysis and figure-generation scripts
 |-- examples/                  Tested result-inspection and prediction examples
 |-- models/                    Frozen XGBoost artifact and machine-readable metadata
@@ -137,6 +137,26 @@ model, sample-level holdout predictions, signed SHAP cache, result tables, and
 publication figures are included so reviewers can inspect or regenerate the
 reported evidence without rerunning every expensive step.
 
+## Final Journal of Earth Science figure set
+
+The exact six main-figure renders used for the Journal of Earth Science
+submission are stored in [`figures/JES_v9`](figures/JES_v9) as PNG, SVG, and
+PDF files. The semantic source-to-manuscript mapping is:
+
+| Manuscript figure | Repository figure | Evidence |
+|---|---|---|
+| Figure 1 | `Figure_1` | Publication-aware curation and grouped split workflow |
+| Figure 2 | `Figure_2` | Sample-random versus publication-grouped validation |
+| Figure 3 | `Figure_3` | Frozen-holdout confusion matrix |
+| Figure 4 | `Figure_4` | Class-specific SHAP importance |
+| Figure 5 | `Figure_5` | Publication-level transfer heterogeneity |
+| Figure 6 | `Figure_6` | Time-closed and source-coverage tests |
+
+TIFF files are intentionally omitted from the repository because they are
+submission-system derivatives of the same rendered figures. The ScholarOne
+upload package uses 600-dpi LZW-compressed TIFF files to avoid EPS font-loss
+during PDF conversion.
+
 The `temporal-v9` stage is a separate, fully time-closed analysis. It restricts
 feature selection, completeness filtering, hyperparameter selection, and model
 fitting to publications dated 2010 or earlier before evaluating publications
@@ -179,7 +199,7 @@ DOI for all versions is https://doi.org/10.5281/zenodo.22478957.
 ## Contact
 
 Yuxuan Zhang  
-School of Earth Sciences and Engineering, China University of
+College of Earth Sciences and Engineering, China University of
 Petroleum-Beijing at Karamay, Karamay 834000, Xinjiang, China  
 Email: 2025015169@st.cupk.edu.cn  
 ORCID: https://orcid.org/0009-0004-0582-8349

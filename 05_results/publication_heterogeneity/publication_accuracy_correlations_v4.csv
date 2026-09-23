@@ -1,0 +1,4 @@
+variable,n_publications,spearman_rho
+n_samples,462,-0.08937118384924758
+mean_element_coverage,462,0.014346771383103342
+publication_year,462,0.012884119708200047
