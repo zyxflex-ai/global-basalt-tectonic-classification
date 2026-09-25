@@ -1,9 +1,8 @@
 # Publication-aware tectonic classification of global basalts
 
 This repository contains the data, code, result tables, and figure assets for
-the manuscript **“Publication-Grouped and Temporal Validation Reveals
-Generalization Limits in Tectonic Classification of Global Basalt
-Geochemistry.”**
+the manuscript **“Publication-grouped validation reveals generalization limits
+in machine-learning tectonic discrimination of global basalts.”**
 
 The central computational result is that sample-random cross-validation can
 substantially overestimate performance when samples from the same source
@@ -24,6 +23,12 @@ reserves a frozen holdout containing previously unseen publication groups.
 - Fully time-closed 2011-2025 test macro-F1: 0.6962.
 - Native missing-value handling and fold-median imputation differed by only
   0.0023 mean macro-F1 on identical grouped folds.
+- Restricting evaluation to directly labelled rows retained the random-versus-
+  grouped gap (macro-F1 0.9038 versus 0.7417).
+- Frozen-holdout macro-F1 was 0.7349 after requiring a complete ten-oxide suite
+  and a reported oxide total of 95-105 wt.%.
+- Support-matched controls showed that severe loss of MORB training support
+  explains part, but not all, of the observed transfer decline.
 
 ## Repository contents
 
@@ -137,11 +142,27 @@ model, sample-level holdout predictions, signed SHAP cache, result tables, and
 publication figures are included so reviewers can inspect or regenerate the
 reported evidence without rerunning every expensive step.
 
-## Final Journal of Earth Science figure set
+Reviewer-directed Chemical Geology sensitivity analyses can be reproduced with:
 
-The exact six main-figure renders used for the Journal of Earth Science
-submission are stored in [`figures/JES_v9`](figures/JES_v9) as PNG, SVG, and
-PDF files. The semantic source-to-manuscript mapping is:
+```bash
+python scripts/93_chemical_geology_reviewer_sensitivities.py
+python scripts/94_petdb_support_matched_control.py
+```
+
+Their tabular outputs are stored in
+[`05_results/chemical_geology_sensitivities`](05_results/chemical_geology_sensitivities).
+These analyses audit publication-size effects, direct-label evaluation rows,
+major-oxide totals, and support-matched MORB training restrictions. They use
+stored frozen predictions or fixed model settings and do not redefine the
+primary model.
+
+## Submission figure set
+
+The exact six main-figure renders are stored in
+[`figures/JES_v9`](figures/JES_v9) as PNG, SVG, and PDF files. The directory
+name records the historical build version; the scientific content is reused in
+the Chemical Geology submission package. The semantic source-to-manuscript
+mapping is:
 
 | Manuscript figure | Repository figure | Evidence |
 |---|---|---|
@@ -189,12 +210,14 @@ provenance.
 Please cite the associated manuscript and the archived repository release:
 
 > Zhang, Y. (2026). *Publication-aware tectonic classification of global
-> basalts* (Version 1.1.1) [Software]. Zenodo.
-> https://doi.org/10.5281/zenodo.22920294
+> basalts* (Version 1.1.2) [Software]. Zenodo.
+> https://doi.org/10.5281/zenodo.22478957
 
 Citation metadata are provided in [`CITATION.cff`](CITATION.cff). The DOI above
-identifies the exact `v1.1.1` release used for the manuscript; the Zenodo concept
-DOI for all versions is https://doi.org/10.5281/zenodo.22478957.
+is the Zenodo concept DOI and resolves to the newest archived release. Version
+`v1.1.2` adds the reviewer-directed sensitivity analyses in scripts 93-94 and
+their machine-readable outputs. The version-specific DOI is recorded in the
+manuscript and release metadata after Zenodo completes the archive.
 
 ## Contact
 

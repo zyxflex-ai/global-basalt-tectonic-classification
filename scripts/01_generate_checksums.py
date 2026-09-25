@@ -25,6 +25,12 @@ TARGETS = [
     "05_results/audit_v9/database_class_time_support_v9.csv",
     "05_results/sensitivity/stable50_native_vs_fold_median_summary_v9.csv",
     "05_results/sensitivity/label_boundary_collapse_sensitivity_v9.csv",
+    "05_results/chemical_geology_sensitivities/direct_label_evaluation_sensitivity.csv",
+    "05_results/chemical_geology_sensitivities/major_oxide_qc_holdout_sensitivity.csv",
+    "05_results/chemical_geology_sensitivities/major_oxide_qc_overview.csv",
+    "05_results/chemical_geology_sensitivities/petdb_support_matched_control_runs.csv",
+    "05_results/chemical_geology_sensitivities/petdb_support_matched_control_summary.csv",
+    "05_results/chemical_geology_sensitivities/publication_size_sensitivity.csv",
     "05_results/figure_source_data/figure6_time_closed_temporal_overall_v9.csv",
     "05_results/figure_source_data/figure6_time_closed_temporal_classes_v9.csv",
     "05_results/figure_source_data/figure6_morb_source_ablation_v9.csv",
@@ -39,6 +45,8 @@ TARGETS = [
     "models/xgboost_stable50_v4.metadata.json",
     "references/petdb_source_records.csv",
     "references/source_publications.csv",
+    "scripts/93_chemical_geology_reviewer_sensitivities.py",
+    "scripts/94_petdb_support_matched_control.py",
 ]
 
 

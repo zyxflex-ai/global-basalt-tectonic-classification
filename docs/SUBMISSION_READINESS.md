@@ -1,6 +1,6 @@
-# Journal of Earth Science repository readiness
+# Chemical Geology repository readiness
 
-Audit date: 2026-09-22
+Audit date: 2026-09-26
 
 ## Completed
 
@@ -26,6 +26,8 @@ Audit date: 2026-09-22
   label-boundary sensitivity, recoverable label mapping, and
   database-by-class-by-time support tables added for the JES revision.
 - JES v9 analysis revision and subsequent integrity updates are on `main`.
+- Chemical Geology reviewer-directed sensitivity scripts 93-94 and their six
+  machine-readable result tables are included in release `v1.1.2`.
 
 ## Required before submission
 
@@ -47,7 +49,6 @@ Audit date: 2026-09-22
 
 Release `v1.0.0` was archived on 2026-09-06 and remains immutable. Release
 `v1.1.0` was archived on 2026-09-22, and `v1.1.1` was archived on 2026-09-23.
-Manuscript citations should use the `v1.1.1` version DOI
-https://doi.org/10.5281/zenodo.22920294 so that the cited files remain
-fixed; the concept DOI https://doi.org/10.5281/zenodo.22478957 may be used when a
-link to the newest available release is intended.
+Release `v1.1.2` adds the Chemical Geology sensitivity analyses. The manuscript
+should cite its version-specific DOI once Zenodo completes the archive; the
+concept DOI https://doi.org/10.5281/zenodo.22478957 links to the newest version.

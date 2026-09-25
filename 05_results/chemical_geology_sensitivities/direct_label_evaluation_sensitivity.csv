@@ -1,0 +1,4 @@
+evaluation_set,design,n_samples,n_publications,n_classes,classes,accuracy,balanced_accuracy,macro_f1
+development_direct_label_rows,publication_grouped_oof,31805,1486,4,CFB;MORB;OIB;OPB,0.8398679452916208,0.7178206295312135,0.7416613251729658
+development_direct_label_rows,sample_random_oof,31805,1486,4,CFB;MORB;OIB;OPB,0.9221820468479799,0.8968298063594444,0.903798812875127
+frozen_holdout_direct_label_rows,frozen_publication_disjoint,9112,383,4,CFB;MORB;OIB;OPB,0.870171202809482,0.7784261221824726,0.7926415192738706

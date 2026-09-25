@@ -1,0 +1,2 @@
+n_all_samples,n_complete_ten_oxide_suite,percent_complete_ten_oxide_suite,oxide_total_mean,oxide_total_median,oxide_total_q1,oxide_total_q3,oxide_total_min,oxide_total_max,n_total_outside_95_105,percent_total_outside_95_105,n_total_outside_90_110,percent_total_outside_90_110
+48403,44716,92.38270355143277,98.39836252140628,98.724522,97.77000000000001,99.56500000000001,72.27882,198.63,2245,5.020574291081492,217,0.4852849092047589

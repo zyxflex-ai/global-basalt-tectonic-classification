@@ -108,6 +108,31 @@ def main() -> None:
     )
     require(len(predictions) == 10_086, "Holdout prediction row count changed")
 
+    sensitivity_root = ROOT / "05_results" / "chemical_geology_sensitivities"
+    direct = pd.read_csv(sensitivity_root / "direct_label_evaluation_sensitivity.csv")
+    direct_scores = direct.set_index("design")["macro_f1"]
+    require(abs(direct_scores["sample_random_oof"] - 0.9037988129) < 1e-9, "Direct-label random macro-F1 changed")
+    require(abs(direct_scores["publication_grouped_oof"] - 0.7416613252) < 1e-9, "Direct-label grouped macro-F1 changed")
+
+    oxide = pd.read_csv(sensitivity_root / "major_oxide_qc_holdout_sensitivity.csv")
+    oxide_score = oxide.set_index("subset").loc["complete_and_total_95_105", "macro_f1"]
+    require(abs(oxide_score - 0.7348818348) < 1e-9, "Major-oxide QC macro-F1 changed")
+
+    publication_size = pd.read_csv(sensitivity_root / "publication_size_sensitivity.csv")
+    retained = publication_size.loc[
+        publication_size["minimum_samples_per_publication"].isin([5, 10, 20]),
+        "percent_publications_accuracy_below_0_5",
+    ]
+    require(retained.between(11.5, 13.8).all(), "Publication-size sensitivity changed")
+
+    support_runs = pd.read_csv(sensitivity_root / "petdb_support_matched_control_runs.csv")
+    support_runs = support_runs.loc[support_runs["training_design"] == "support_matched_random_MORB"]
+    fractions = support_runs.groupby("repeat", observed=True)["retained_morb_petdb_fraction"].first()
+    require(len(fractions) == 20, "Support-matched repeat count changed")
+    require(abs(fractions.mean() - 0.9295880150) < 1e-9, "Support-matched PetDB fraction changed")
+    require(abs(fractions.min() - 0.7602996255) < 1e-9, "Support-matched PetDB minimum changed")
+    require(abs(fractions.max() - 1.0) < 1e-12, "Support-matched PetDB maximum changed")
+
     with np.load(
         ROOT / "05_results" / "figures" / "shap_direction" / "stable50_independent_test_shap_values_v4.npz",
         allow_pickle=False,
