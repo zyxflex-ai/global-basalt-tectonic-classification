@@ -211,13 +211,13 @@ Please cite the associated manuscript and the archived repository release:
 
 > Zhang, Y. (2026). *Publication-aware tectonic classification of global
 > basalts* (Version 1.1.2) [Software]. Zenodo.
-> https://doi.org/10.5281/zenodo.22478957
+> https://doi.org/10.5281/zenodo.22967141
 
 Citation metadata are provided in [`CITATION.cff`](CITATION.cff). The DOI above
-is the Zenodo concept DOI and resolves to the newest archived release. Version
-`v1.1.2` adds the reviewer-directed sensitivity analyses in scripts 93-94 and
-their machine-readable outputs. The version-specific DOI is recorded in the
-manuscript and release metadata after Zenodo completes the archive.
+identifies the immutable `v1.1.2` release used for the Chemical Geology
+submission. This release adds the reviewer-directed sensitivity analyses in
+scripts 93-94 and their machine-readable outputs. The Zenodo concept DOI for
+all versions is https://doi.org/10.5281/zenodo.22478957.
 
 ## Contact
 

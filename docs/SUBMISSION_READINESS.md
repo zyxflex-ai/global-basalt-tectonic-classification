@@ -22,6 +22,8 @@ Audit date: 2026-09-26
   https://doi.org/10.5281/zenodo.22898634.
 - Public GitHub release `v1.1.1`, archived in Zenodo under the version DOI
   https://doi.org/10.5281/zenodo.22920294.
+- Public GitHub release `v1.1.2`, archived in Zenodo under the version DOI
+  https://doi.org/10.5281/zenodo.22967141.
 - Fully time-closed temporal validation, direct Stable-50 missingness comparison,
   label-boundary sensitivity, recoverable label mapping, and
   database-by-class-by-time support tables added for the JES revision.
@@ -50,5 +52,6 @@ Audit date: 2026-09-26
 Release `v1.0.0` was archived on 2026-09-06 and remains immutable. Release
 `v1.1.0` was archived on 2026-09-22, and `v1.1.1` was archived on 2026-09-23.
 Release `v1.1.2` adds the Chemical Geology sensitivity analyses. The manuscript
-should cite its version-specific DOI once Zenodo completes the archive; the
-concept DOI https://doi.org/10.5281/zenodo.22478957 links to the newest version.
+should cite the immutable version DOI https://doi.org/10.5281/zenodo.22967141;
+the concept DOI https://doi.org/10.5281/zenodo.22478957 links to the newest
+available version.
